@@ -17,8 +17,6 @@
     </ul>
     <h1>{{ paste.title }}</h1>
     <h2>{{ paste.language }}</h2>
-    <code>
-      {{ paste.code_body }}
-    </code>
+  {% autoescape off %}{{ result }}{% endautoescape %}
   </main>
 {% endblock %}
