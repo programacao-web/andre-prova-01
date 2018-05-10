@@ -1,0 +1,31 @@
+answers:
+3-
+# a
+mobile first é uma abordagem para o desenvolvimento de front end no qual primeiro se faz a interface para mobile e entao se adapta para dispositivos de tela maior
+
+# b 
+nao. ele desaparece para mobile, o que significa perda de elementos ou 'qualidade' na interface. isso é totalmente fora da abordagem mobile-first.
+
+4-
+# a
+o problema n+1 significa que a orm ao precisar de n dados, fará n+1 buscas.
+todas as orms de dados sql estão sujeitas à este problema, porém existem várias formas de contorná-lo e a maioria dos frameworks de desenvolvimento possuem formas que ajudam a resolver isso.
+
+# b
+ele apareceria com a requisição de pegar todos os objetos relacionados ao user.
+para resolver poderíamos usar o recurso select_related, já implementado no django, assim evitando o problema
+
+5-
+class Person{
+    constructor(name, age){
+        self.name = name;
+        self.age = age;
+    }
+    isAdult(this){
+        return self.age >= 18;
+    }
+
+let people = [Person('Joao', 21), Person('Maria', 20), Person('Zé', 8)];
+let adults = x.isAdult() ? x for x in people : [ ];
+let mean_age = sum(x.age for x in adults) / lenght(adults);
+

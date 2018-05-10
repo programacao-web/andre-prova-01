@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from pastebin.models import Paste
 
 
 def question_view(request, i):
@@ -12,7 +13,7 @@ def question_view(request, i):
     try:
         from pastebin.models import Paste
         paste = Paste.objects.get(title=paste_title)
-        ctx['paste_data'] = paste.title
+        ctx['paste_data'] = paste.code_body
     except:
         ctx['paste_data'] = ('Seu model deve se chamar Paste e você deve fazer '
                              'um paste com o título %r.' % paste_title)
